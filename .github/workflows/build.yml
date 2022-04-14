@@ -20,4 +20,4 @@ jobs:
     - name: Checkout 🛎️
       uses: actions/checkout@v2.3.1
     - name: Build and Deploy 🚀
-      uses: Git-Kyro/gitbook@v1.0.2
+      uses: Gonejar99/gitbook-build-publish-action@v1.0.2
