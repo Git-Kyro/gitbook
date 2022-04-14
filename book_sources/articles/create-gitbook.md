@@ -1,6 +1,6 @@
 ## 建立GitBook
 
-利用 GiBook CLI + GitHub Pages + Github Actions 建立私人的GitBook
+利用 GiBook CLI + GitHub Pages + Github Actions 建立私人的GitBook，[参考链接](https://www.onejar99.com/gitbook-building-and-publishing-free-unlimitedly/)
 
 ### GitBook CLI 新建电子书
 
@@ -52,9 +52,7 @@ PS:
     
     images 目录专门存放文档图片。
 
-新增 book.json 文件
-
-###### book.json 是 gitbook CLI 工具必要的文件
+新增 book.json 文件，book.json 是 gitbook CLI 工具必要的文件
 
 ```sh
 $ cat book_sources/book.json
@@ -204,7 +202,7 @@ $ git push
 
 ![picture](../images/create-gitbook_005.png)
 
-访问 GitBook：[https://<你的 GitHub 名>.github.io/gitbook](https://git-kyro.github.io/gitbook)。
+访问 GitBook：[https://<你的 GitHub 帳號>.github.io/gitbook](https://git-kyro.github.io/gitbook)。
 
 ### 编辑书籍内容， 测试 GitBook 自动发布更新
 
