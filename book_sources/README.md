@@ -1,4 +1,4 @@
-# 關於本書 📚
+# About the book 📚
 
-没有过多的规划, 一些随意的记录.
+Some random notes
 
