@@ -1,5 +1,4 @@
 # 關於本書 📚
 
-示範如何用 GitHub Pages + GitHub Actions 免費建立自己的 GitBook。
+没有过多的规划, 一些随意的记录.
 
-本書網址：https://books.onejar99.com/demo-build-and-publish-gitbook
