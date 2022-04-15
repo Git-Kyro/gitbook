@@ -2,7 +2,7 @@
 
 Terminal setting
 
-### Add Color to Text in the zsh Prompt
+#### Add Color to Text in the zsh Prompt
 
 ```sh
 [kyro@Kyros-MacBook-Pro ~]#cat ~/.zshrc 
@@ -18,6 +18,6 @@ alias brew='/opt/homebrew/bin/brew'
 alias tree='/opt/homebrew/Cellar/tree/2.0.2/bin/tree'
 ```
 
-### Move and resize windows in macOS using keyboard shortcuts or snap areas
+#### Move and resize windows in macOS using keyboard shortcuts or snap areas
 
 [Rectangle](https://rectangleapp.com/)
