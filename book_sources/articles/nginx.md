@@ -4,13 +4,13 @@ nginx部署
 
 依赖包
 
-```shell script
+```sh
 yum install -y gcc gcc-c++ autoconf automake openssl openssl-devel pcre pcre-devel bzip2 lsof zlib-devel  libtool libtool-* git unzip
 ```
 
 编译
 
-```shell script
+```sh
 wget http://nginx.org/download/nginx-1.14.2.tar.gz
 ./configure --prefix=/usr/local/nginx --user=admin --group=admin    --with-http_ssl_module --with-http_flv_module --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module   --with-http_v2_module --add-module=/srv/ngx_http_geoip2_module-master
 ```
@@ -47,7 +47,7 @@ wget https://codeload.github.com/leev/ngx_http_geoip2_module/zip/master
 
 开机自启  
 
-```shell script
+```sh
 vim /etc/systemd/system/nginx.service
 [Unit]
 Description=The nginx HTTP and reverse proxy server
@@ -103,7 +103,7 @@ nginx浏览器浏览文本文件
       autoindex_format html;
   }  
 ```
-```shell script
+```sh
 vim /usr/local/nginx/conf/mime.types  添加
     text/plain                                       log;
 ```

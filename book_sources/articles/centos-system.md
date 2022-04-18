@@ -85,7 +85,7 @@ docker rm -v $(docker ps -aq -f status=dead)
 
 /etc/sysctl.conf
 
-```shell script
+```sh
 net.ipv4.ip_forward=1
 fs.nr_open=100000000
 fs.file-max = 1048576

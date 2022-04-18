@@ -79,7 +79,9 @@ yum -y --enablerepo=elrepo-kernel install kernel-ml
 
 wget https://elrepo.org/linux/kernel/el7/x86_64/RPMS/kernel-lt-4.4.185-1.el7.elrepo.x86_64.rpm
 
+```sh
 rpm -ivh kernel-lt-4.4.185-1.el7.elrepo.x86_64.rpm
+```
 
 4 修改grub中默认的内核版本
 
@@ -131,7 +133,7 @@ done
 ```
 
 重启系统并查看系统内核
-```shell script
+```sh
 reboot
 [root@02-06-01-k-01 srv]# uname -r
 5.10.0-1.el7.elrepo.x86_64
