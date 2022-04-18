@@ -14,5 +14,5 @@
 * [About Golang]()
     * [Interface](./articles/interface.md)
 * [About MacBook]()
-    * [MacBook-m1-book](./articles/macbook-m1-pro.md)
+    * [MacBook-m1-pro](./articles/macbook-m1-pro.md)
     * [explain](./articles/english-kubernetes-explain.md)
