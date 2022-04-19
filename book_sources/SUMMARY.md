@@ -11,6 +11,8 @@
     * [K8S Command](./articles/kubernetes-develop/k8s-command.md)
     * [K8S API](./articles/kubernetes-develop/k8s-api.md)
     * [K8S Scheme](./articles/kubernetes-develop/k8s-scheme.md)
+    * [K8S Clientset](./articles/kubernetes-develop/k8s-clientset.md)
+
 * [About Python]()
     * [Exec Shell](./articles/exec-shell.md)
 * [About Golang]()

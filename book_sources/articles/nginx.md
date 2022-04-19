@@ -18,30 +18,26 @@ wget http://nginx.org/download/nginx-1.14.2.tar.gz
 --with-http_flv_module 流媒体播放支持
 ngx_http_geoip2_module 屏蔽某个地区的 IP 访问，或者根据访问来源转向不同的子站实现分流
 
-
+```sh
 wget http://zlib.net/zlib-1.2.11.tar.gz
-
-   ./configure --prefix=/usr/local/zlib
-   
-    make
-    
-    make install
-    
+./configure --prefix=/usr/local/zlib
+make
+make install
+```
+ 
+```sh   
 wget https://www.openssl.org/source/openssl-1.0.2j.tar.gz
+./configure --prefix=/usr/local/openssl
+make
+make install
+```  
 
-    ./configure --prefix=/usr/local/openssl
-    
-    make
-    
-    make install
-    
+```sh    
 git clone --recursive https://github.com/maxmind/libmaxminddb
-
-    ./configure (不要指定安装路径)
-    
-    make
-    
-    make install
+./configure (不要指定安装路径)
+make
+make install
+```
     
 wget https://codeload.github.com/leev/ngx_http_geoip2_module/zip/master
 

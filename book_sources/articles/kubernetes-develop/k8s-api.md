@@ -39,13 +39,13 @@ Resource: deployments
 Kind: 系统中真正的实体
 
 ```sh
-apiVersion: batch/v1
-kind: Job
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: demo
+  name: minio
   namespace: default
 
-Group: batch
+Group: apps
 Version: v1
-Kind: Job
+Kind: Deployment
 ```
