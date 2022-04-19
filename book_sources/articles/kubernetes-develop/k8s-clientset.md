@@ -106,7 +106,9 @@ func (c *Clientset) AppsV1() appsv1.AppsV1Interface {
 }
 ```
 
-appsv1.AppsV1Interface 包含的 rest.Interface 和 DeploymentsGetter 接口, DeploymentsGetter 实际上是对 DeploymentInterface 做了一层封装而已，
+appsv1.AppsV1Interface 包含的 rest.Interface 和 DeploymentsGetter 接口, 
+
+DeploymentsGetter 实际上是对 DeploymentInterface 做了一层封装而已，
 
 所以只要实现 rest.Interface 和 DeploymentInterface 就可以了
 
@@ -221,7 +223,7 @@ func NewForConfig(c *rest.Config) (*AppsV1Client, error) {
    func (c *RESTClient) Post() *Request
 ```
 
-DeploymentInterface 的具体实现
+AppsV1Client 实现 rest.Interface
 
 ```go
 // staging/src/k8s.io/client-go/kubernetes/typed/apps/v1/apps_client.go
@@ -229,6 +231,20 @@ DeploymentInterface 的具体实现
 type AppsV1Client struct {
     restClient rest.Interface
 }
+
+func (c *AppsV1Client) RESTClient() rest.Interface {
+    if c == nil {
+        return nil
+    }
+    return c.restClient
+}
+```
+
+
+AppsV1Client 实现 DeploymentInterface 
+
+```go
+// staging/src/k8s.io/client-go/kubernetes/typed/apps/v1/apps_client.go
 
 func (c *AppsV1Client) Deployments(namespace string) DeploymentInterface {
     return newDeployments(c, namespace)
