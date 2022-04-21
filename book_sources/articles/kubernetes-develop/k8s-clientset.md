@@ -68,5 +68,11 @@ func homeDir() string {
 
 3. 然后是 Clientset 对象的方法去获取各个 Group 下面的对应资源对象进行 CRUD 操作
 
+将资源对象封装到全局的 Clientset 需要实现的接口 
+
 ![picture](../../images/k8s-clientset-1.drawio.png)
+
+Deployment 实现 Clientset 的接口
+
+![picture](../../images/k8s-clientset-2.drawio.png)
 
