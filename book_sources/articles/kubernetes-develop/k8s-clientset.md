@@ -240,7 +240,6 @@ func (c *AppsV1Client) RESTClient() rest.Interface {
 }
 ```
 
-
 AppsV1Client 实现 DeploymentInterface 
 
 ```go
