@@ -1,6 +1,6 @@
 Kubernetes explain
 
-```textmate
+```text
 Hi everyone, my name is Sai Vennam
 and I'm a developer advocate with IBM
 Today, I'm back with another video
@@ -15,9 +15,9 @@ So, we've got here, sketched out, two sides of the puzzle.
 On the left side here, we've got the cloud side,
 and what we've got here is a very important component 
 that's going to be the Kubernetes master.
-The Kubernetes master has a lot of important components in ti,
+The Kubernetes master has a lot of important components in it,
 but the most important piece that we want to talk about today is going to be the API server.
-The Kubernetes API server running on the master is integral to running all fo your workloads and exposes a set of capabilities,
+The Kubernetes API server running on the master is integral to running all of your workloads and exposes a set of capabilities,
 allowing us to define exactly how we want to run our workloads.
 On the right side here, on the customer-managed side,
 we've got our worker nodes,
@@ -61,7 +61,7 @@ So, taking a look,
 let's say that it starts it up in our first worker node here with the label that we've given it: "application is frontend".
 And one thing to note here: it actually does get an IP address as well.
 Let's say we get an internal IP address that ends in a ".1".
-So, at this point, i could SSH into to any of the worker nodes and use that IP address to hit that application.
+So, at this point, i could SSH into any of the worker nodes and use that IP address to hit that application.
 So, that's great for deploying a simple application;
 let's take it a step further.
 Kubernetes has an abstraction called deployments,
@@ -73,13 +73,13 @@ So, we've got the pod labeled as "application is frontend",
 and we want to say that we want to create, maybe, three replicas of that.
 So, going back to our manifest here.
 One thing we need to do is tell Kubernetes that we don't want a pod,
-we want template for a pod.
+we want the template for a pod.
 So, we'll scratch that out,
 and we'll create a template for a pod .
 On top of that, we've got a few other things that we want.
 So, the number of replicas - let's say we want three.
 We've got a selector.
-So, we want to tell this deployment to manager any application deployed with that kind of name here.
+So, we want to tell this deployment to manage any application deployed with that kind of name here.
 We'll say match that selector here.
 Again, this is not entirely valid YAML -
 I just want give you an idea of the kind of artifacts that Kubernetes is looking for.
@@ -111,25 +111,25 @@ So, we'll create another application deployment: application is backend.
 And for this one, let's just scale it out two times.
 So, we'll go here: "application is backend".
 And everyone's happy.
-Now we need to stat thinking about communication between these services.
+Now we need to start thinking about communication between these services.
 We talked about how every pod has an IP address,
 but we also mentioned that some of these pods might die.
 Maybe you'll have to update them at some point.
 When a pod goes away and comes back it actually has a different IP address.
-So, if we want to access one of those pods from the backend or even external uses,
+So, if we want to access one of those pods from the backend or even for external uses,
 we need an IP address that we can rely on.
 And this is a problem that's been around for a while,
 and service registry and service discovery capabilities were created to solve exactly that.
 That comes built-in with Kubernetes.
-So, that we're gonna do now is create a service to actually create a more stable IP address
+So, what we're gonna do now is create a service to actually create a more stable IP address
 so we can access our pods as a singular application,
 rather than individual different services.
 SO, to do that, we're gonna take a step back here,
-and we're going to create a service definition  around those three pods.
+and we're going to create a service definition around those three pods.
 To do that, we're going to need some more manifest YAML.
 So, we'll go back here and create a new section in our file.
 This time we've got a kind: service.
-And we're going to need selector on that.
+And we're going to need a selector on that.
 Again, that's going to match the label that we've got here.
 And, the last thing that we need here is a type.
 So, how do we want to actually expose this?
@@ -141,7 +141,7 @@ it hits our master, goes over here,
 and creates that abstraction we talked about.
 We can say that we created another one for the backend as well.
 So, what we get now is a cluster IP.
-Let's just say "CL IP" for short -
+Let's just say "CLIP" for short -
 and that's going to be an internal IP.
 Say, it ends in a 5.
 And then another cluster IP for our other service here.
@@ -155,20 +155,20 @@ So, they could hit each other using the name "frontend".
 "backend" - or "F" or "B" for short.
 So, we've got that and we talked about how now the services can talk to each other,
 by using these cluster IPs.
-So, communication within the clusters in solved.
-To do that, what we'll need to do is define a type of this service,
+So, communication within the clusters is solved.
+To do that, what we'll need to do is define the type of this service,
 and what we want is a load balancer.
 There are actually other ways to expose, like node ports as well,
 but a load balancer, essentially that it's going to do,
 where this is internal to actual Kubernetes worker nodes,
 we can create an external IP now.
 And this might be, let's say, a 169 address.
-And now, what we can do is expose that directly to end users 
+And now, what we can do is expose that directly to end-users 
 so that they can access that frontend by directly using that service.
 We've talked about 3 major components here today.
 We've got pods.
 Pods, which are then deployed and managed by deployments.
-And then, facilitating access to those pods create by those deployments using services.
+And then, facilitating access to those pods created by those deployments using services.
 Those are the 3 major components working together with the Kubernetes master and all the worker nodes
 to allow you to really redefine your DevOps workflow for deploying your applications into a managed Kubernetes service.
 i know we talked about a lot today
