@@ -28,7 +28,7 @@ bash ./centos7_vnc_install.sh  # 安装过程需要输入登陆 VNC 的密码
 
 检查状态
 
-sh```
+```sh
 systemctl status vncserver@:1.service
 systemctl status novnc@:1.service
 ```
@@ -88,3 +88,5 @@ server {
     return 404; # managed by Certbot
 }
 ```
+
+参考连接 https://zhuanlan.zhihu.com/p/378723906
