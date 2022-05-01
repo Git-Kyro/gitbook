@@ -18,6 +18,4 @@ alias brew='/opt/homebrew/bin/brew'
 alias tree='/opt/homebrew/Cellar/tree/2.0.2/bin/tree'
 ```
 
- Move and resize windows in macOS using keyboard shortcuts or snap areas
-
-[Rectangle](https://rectangleapp.com/)
+ Move and resize windows in macOS using keyboard shortcuts or snap areas [Rectangle](https://rectangleapp.com/)

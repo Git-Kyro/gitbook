@@ -1,6 +1,16 @@
 ## Novnc
 
-通过 web 页面远程连接 Linux Desktop
+web site remote Linux Desktop
+
+如果想 Remote 到 Docker 里面的 Centos, 先用 Docker 启动 Centos
+
+如果想 Romte 到 VM 忽略下面的 Docker 启动，直接安装 VNC 开始执行
+
+```sh
+docker pull centos:7.9.2009
+docker run -itd --privileged --name centos7.9_vnc -p 5901:5901 -p 6901:6901 centos:7.9.2009 /usr/sbin/init
+docker exec -it centos7.9_vnc bash
+```
 
 安装 VNC
 
@@ -13,8 +23,17 @@ curl -L https://gitee.com/panchongwen/my_scripts/raw/main/linux/centos7_vnc_inst
 
 # git clone https://github.com.cnpmjs.org/novnc/websockify
 # 改为 git clone https://github.com/novnc/websockify
-bash ./centos7_vnc_install.sh
+bash ./centos7_vnc_install.sh  # 安装过程需要输入登陆 VNC 的密码
 ```
+
+检查状态
+
+sh```
+systemctl status vncserver@:1.service
+systemctl status novnc@:1.service
+```
+
+远程登陆: http://127.0.0.1:6901 # 会提示输入安装过程中的登陆 VNC 的密码
 
 设置 vncserver 适配屏幕
 
@@ -24,7 +43,7 @@ vim /usr/bin/vncserver_wrapper
 ```
 
 设置访问 web 页面登陆密码
-http://127.0.0.1:6901
+
 
 ```sh
 yum -y install httpd-tools
@@ -41,8 +60,8 @@ server {
 
     listen [::]:443 ssl ipv6only=on; # managed by Certbot
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/novnc.ddnsking.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/novnc.ddnsking.com/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/novnc.localhost.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/novnc.localhost.com/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
     location / {
@@ -60,12 +79,12 @@ server {
     }
 }
 server {
-    if ($host = novnc.ddnsking.com) {
+    if ($host = novnc.localhost.com) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
         listen       80;
         listen       [::]:80;
-        server_name  novnc.ddnsking.com;
+        server_name  novnc.localhost.com;
     return 404; # managed by Certbot
 }
 ```
