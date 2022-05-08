@@ -103,3 +103,30 @@ nginx浏览器浏览文本文件
 vim /usr/local/nginx/conf/mime.types  添加
     text/plain                                       log;
 ```
+
+Using Free Let’s Encrypt SSL/TLS Certificates with NGINX
+
+Download the Let’s Encrypt Client
+
+```
+yum -y install update  certbot python-certbot-nginx
+```
+
+Set Up NGINX
+
+Specify your domain name (and variants, if any) with the server_name directive:
+
+```
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    server_name example.com www.example.com;
+}
+```
+
+Obtain the SSL/TLS Certificate
+
+```
+certbot --nginx -d example.com -d www.example.com
+```

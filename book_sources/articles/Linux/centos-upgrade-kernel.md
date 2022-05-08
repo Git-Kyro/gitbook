@@ -83,58 +83,46 @@ wget https://elrepo.org/linux/kernel/el7/x86_64/RPMS/kernel-lt-4.4.185-1.el7.elr
 rpm -ivh kernel-lt-4.4.185-1.el7.elrepo.x86_64.rpm
 ```
 
-4 修改grub中默认的内核版本
-
-内核升级完毕后，目前内核还是默认的版本，如果此时直接执行reboot命令，重启后使用的内核版本还是默认的3.10，
-
-不会使用新的5.2.2，首先，我们可以通过命令查看默认启动顺序
+4 查看系统可用内核
 
 ```sh
-[root@localhost ~]# awk -F\' '$1=="menuentry " {print $2}' /etc/grub2.cfg
-CentOS Linux (5.10.0-1.el7.elrepo.x86_64) 7 (Core)
-CentOS Linux (4.4.182-1.el7.elrepo.x86_64) 7 (Core)
-CentOS Linux (3.10.0-957.21.3.el7.x86_64) 7 (Core)
-CentOS Linux (3.10.0-957.10.1.el7.x86_64) 7 (Core)
-CentOS Linux (3.10.0-327.el7.x86_64) 7 (Core)
-CentOS Linux (0-rescue-e34fb4f1527b4f2d9fc75b77c016b6e7) 7 (Core)
+[root@instance-1 ~]#cat /boot/grub2/grub.cfg  | grep menuentry
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+  menuentry_id_option=""
+export menuentry_id_option
+menuentry 'CentOS Linux (5.17.3-1.el7.elrepo.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-5.17.3-1.el7.elrepo.x86_64-advanced-1fc4211c-2271-43b7-92f0-3fbdbe1c2f2f' {
+menuentry 'CentOS Linux (3.10.0-1160.62.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.62.1.el7.x86_64-advanced-1fc4211c-2271-43b7-92f0-3fbdbe1c2f2f' {
+menuentry 'CentOS Linux (3.10.0-1160.59.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.59.1.el7.x86_64-advanced-1fc4211c-2271-43b7-92f0-3fbdbe1c2f2f' {
+menuentry 'CentOS Linux (0-rescue-63dab8ca6840989080052035d6dabdff) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-0-rescue-63dab8ca6840989080052035d6dabdff-advanced-1fc4211c-2271-43b7-92f0-3fbdbe1c2f2f' {
 ```
 
-由上面可以看出新内核(4.12.4)目前位置在0，原来的内核(3.10.0)目前位置在1，所以如果想生效最新的内核，
-
-还需要我们修改内核的启动顺序为0：
+5 设置开机从新内核启动
 
 ```sh
-vim /etc/default/grub
-GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
-GRUB_DEFAULT=0
-GRUB_DISABLE_SUBMENU=true
-GRUB_TERMINAL_OUTPUT="console"
-GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet"
-GRUB_DISABLE_RECOVERY="true"
+grub2-set-default 'CentOS Linux (5.17.3-1.el7.elrepo.x86_64) 7 (Core)'
 ```
 
-注：Centos 6 更改的文件相同，使用命令确定新内核位置后，然后将参数default更改为0即可。
-
-接着运行grub2-mkconfig命令来重新创建内核配置，如下：
+6 查看内核启动项
 
 ```sh
-[root@02-06-01-k-01 srv]#grub2-mkconfig -o /boot/grub2/grub.cfg
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-5.10.0-1.el7.elrepo.x86_64  <---------
-Found initrd image: /boot/initramfs-5.10.0-1.el7.elrepo.x86_64.img <---------
-Found linux image: /boot/vmlinuz-3.10.0-1160.49.1.el7.x86_64
-Found initrd image: /boot/initramfs-3.10.0-1160.49.1.el7.x86_64.img
-Found linux image: /boot/vmlinuz-3.10.0-1062.el7.x86_64
-Found initrd image: /boot/initramfs-3.10.0-1062.el7.x86_64.img
-Found linux image: /boot/vmlinuz-0-rescue-fc18f1c6564848e4a67985376955cf2e
-Found initrd image: /boot/initramfs-0-rescue-fc18f1c6564848e4a67985376955cf2e.img
-done
+[root@instance-1 ~]#grub2-editenv list
+saved_entry=CentOS Linux (5.17.3-1.el7.elrepo.x86_64) 7 (Core)
 ```
 
-重启系统并查看系统内核
+7 重启系统使内核生效
+
 ```sh
-reboot
-[root@02-06-01-k-01 srv]# uname -r
-5.10.0-1.el7.elrepo.x86_64
+[root@instance-1 ~]#reboot
 ```
+
+8 启动完成确认内核版本是否更新
+
+```sh
+[root@instance-1 ~]#uname -r
+5.17.3-1.el7.elrepo.x86_64
+```
+
+
+
+
