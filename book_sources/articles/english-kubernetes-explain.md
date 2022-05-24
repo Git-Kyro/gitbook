@@ -16,27 +16,34 @@ On the left side here, we've got the cloud side,
 and what we've got here is a very important component 
 that's going to be the Kubernetes master.
 The Kubernetes master has a lot of important components in it,
-but the most important piece that we want to talk about today is going to be the API server.
-The Kubernetes API server running on the master is integral to running all of your workloads and exposes a set of capabilities,
+but the most important piece \
+						that we want to talk about today is going to be the API server.
+The Kubernetes API server running on the master is integral \
+					to running all of your workloads and exposes a set of capabilities,
 allowing us to define exactly how we want to run our workloads.
 On the right side here, on the customer-managed side,
 we've got our worker nodes,
 which are all also Kubernetes-based.
-There's one major component that i want to point our running on every single Kubernetes worker node,
+There's one major component that i want to point \
+									our running on every single Kubernetes worker node,
 and that's going to be the kubelet.
-The kubelet, essentially, is responsible for scheduling and making sure apps are healthy and running within our worker nodes.
-You can imagine that the master and the kubelet are going to be working together quite often.
+The kubelet, essentially, is responsible for scheduling and \
+						making sure apps are healthy and running within our worker nodes.
+You can imagine that the master and the kubelet are \
+												going to be working together quite often.
 Let's take a step back.
 Why would someone want to start using Kubernetes?
 Well, maybe they have some micro-services that make up a cloud-native application.
 As we all know, micro-services are talking to each other over the network.
 To really simplify this example,
 let's say we've got a frontend and a backend,
-and those are the two components that we want to scale out and deploy to that cluster today.
+and those are the two components that we want to scale out and \
+														deploy to that cluster today.
 So, Kubernetes uses YAML to define the resources that are sent to the API server,
 which end up creating the actual application.
 So, let's get started with that by sketching out a simple YAML for deploying a pod.
-A pod is a really small logical unit which allows you to run a simple container in worker node.
+A pod is a really small logical unit which allows you to run \
+													a simple container in worker node.
 So, we'll start with that.
 Let's say we've got a pod, and what we need is an image that's associated with it.
 Let's say that it's a container, 
@@ -52,16 +59,19 @@ So, for the labels, we'll just say the application is "f" for "frontend".
 Alright, so we've got that created,
 and what we want to do is push it through our process to get into a worker node.
 What we've got here is kubectl.
-Using that, we're gonna be able to deploy the simple manifest that we've got and have it in one of our worker nodes.
+Using that, we're gonna be able to deploy the simple manifest that we've got \
+												and have it in one of our worker nodes.
 So, we'll push the manifest through kubectl,
 it hits the API running on the Kubernetes master,
 and that, in turn, is going to go and talk to one of the kubelets 
 because we just want to deploy one of these pods and start it up.
 So, taking a look,
-let's say that it starts it up in our first worker node here with the label that we've given it: "application is frontend".
+let's say that it starts it up in our first worker node here with the label \
+											that we've given it: "application is frontend".
 And one thing to note here: it actually does get an IP address as well.
 Let's say we get an internal IP address that ends in a ".1".
-So, at this point, i could SSH into any of the worker nodes and use that IP address to hit that application.
+So, at this point, i could SSH into any of the worker nodes and \
+												use that IP address to hit that application.
 So, that's great for deploying a simple application;
 let's take it a step further.
 Kubernetes has an abstraction called deployments,
@@ -79,7 +89,8 @@ and we'll create a template for a pod .
 On top of that, we've got a few other things that we want.
 So, the number of replicas - let's say we want three.
 We've got a selector.
-So, we want to tell this deployment to manage any application deployed with that kind of name here.
+So, we want to tell this deployment to manage any application deployed with \
+																that kind of name here.
 We'll say match that selector here.
 Again, this is not entirely valid YAML -
 I just want give you an idea of the kind of artifacts that Kubernetes is looking for.
@@ -92,7 +103,8 @@ it hits the API server.
 Now it's not an ephemeral kind of object -
 Kubernetes needs to manage the desired state -
 so what is going to do is,
-it's going to manage that deployment for as long as we have that deployment and we don't delete it.
+it's going to manage that deployment for as long as we have \
+												that deployment and we don't delete it.
 it's going to manage that here.
 So, we'll say that it creates a deployment, 
 and since we've got three replicas,
@@ -119,9 +131,11 @@ When a pod goes away and comes back it actually has a different IP address.
 So, if we want to access one of those pods from the backend or even for external uses,
 we need an IP address that we can rely on.
 And this is a problem that's been around for a while,
-and service registry and service discovery capabilities were created to solve exactly that.
+and service registry and service discovery capabilities \
+													were created to solve exactly that.
 That comes built-in with Kubernetes.
-So, what we're gonna do now is create a service to actually create a more stable IP address
+So, what we're gonna do now is create a service to actually \
+														create a more stable IP address
 so we can access our pods as a singular application,
 rather than individual different services.
 SO, to do that, we're gonna take a step back here,
@@ -146,7 +160,8 @@ and that's going to be an internal IP.
 Say, it ends in a 5.
 And then another cluster IP for our other service here.
 And, we'll say that ends in ".6".
-So, now we have an IP that we can use to reliably do communication between these services.
+So, now we have an IP that we can use to reliably do \
+										communication between these services.
 In addition, the KubeDNS service,
 which is usually running by default,
 will make it even easier for these services to access each other.
@@ -169,8 +184,10 @@ We've talked about 3 major components here today.
 We've got pods.
 Pods, which are then deployed and managed by deployments.
 And then, facilitating access to those pods created by those deployments using services.
-Those are the 3 major components working together with the Kubernetes master and all the worker nodes
-to allow you to really redefine your DevOps workflow for deploying your applications into a managed Kubernetes service.
+Those are the 3 major components working together with \
+										the Kubernetes master and all the worker nodes
+to allow you to really redefine your DevOps workflow for deploying your applications \
+													into a managed Kubernetes service.
 i know we talked about a lot today
 but we want to get into more in-depth topics in our future light boarding videos.
 for example, something like deployments.
