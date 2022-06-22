@@ -1,5 +1,6 @@
 ## Terraform
 
+```
 通过声明式配置文件预览虚拟机、容器、存储空间和网络等资源，从源代码控制资源，从而为测试和生产环境保持理想的与配置状态
 
 创建main.tf文件
@@ -36,3 +37,4 @@ consul 用来充当terraform backend存储
 当多人操作给你tfstate文件加锁，防止多人操作产生的偏差
 
 terraform workspace隔离
+```
