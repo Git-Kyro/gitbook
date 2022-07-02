@@ -41,7 +41,7 @@ And in this deployment, we'll have to define some configuration.
 Things like, what's the image? and maybe the replicas, and maybe some other configuration.
 So, that's one kunernetes resourece.
 And, essentially what you would do, is take that and deploy it into \
-         						your kubernetes cluster at which point a deployment is made.
+         					your kubernetes cluster at which point a deployment is made.
 Here's where the control loop kicks in: so kubernetes observes the state of your cluster,
 so we've got a kubernetes cluster here,
 and checks for the difference between what you want versus what's there.
