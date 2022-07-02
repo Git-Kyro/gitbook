@@ -23,3 +23,4 @@
     * [MacBook-m1-pro](./articles/macbook-m1-pro.md)
     * [k8s explain](./articles/english-kubernetes-explain.md)
     * [k8s explain transration](./articles/english-kubernetes-explain-transration.md)
+    * [k8s operator](./articles/english-kubernetes-operator.md)
