@@ -7,17 +7,17 @@ and I'm with the IBM Cloud team.
 Today we want to talk about operators,
 and no, I'm not actually talking about operation teams,
 but instead the operators framework which can be used on kubernetes or openshift.
-CoreOS actually introduced the operator framework back in 20126.
+CoreOS actually introduced the operator framework back in 2012.
 CoreOS is now a part of RedHat and IBM.
 Operator framework is quickly picking up traction as it's a \
-								greate way of managing complex kubernetes applications.
+								great way of managing complex kubernetes applications.
 Now, before i jump into this,
 we want to actually introduce what the kubernetes control loop is \ 
 									because it's a core part of the operators framework.
 In this video, we're going to be talking about things like deployments and pods,
 so if you're not familiar with those be sure to check out the kubernetes \
 										 explained video that i've done on those topics.
-But ler's get started with exactly what the control loop is in kubernetes.
+But let's get started with exactly what the control loop is in kubernetes.
 Now, essentially the way it starts,
 the control loop is the core part of kubernetes,
 it observes the state of what's in your actual cluster.
@@ -50,7 +50,7 @@ So, it's gonna act on that difference,
 and it's gonna create some pods.
 Now, let's say for a fairly complex application we don't just have \
 													one YAMl but we have a secound YAML,
-it's for hte backend,
+it's for the backend,
 and so that deploys in the second deployment,
 and that in turn deploys a pod using the controllers in the control loop.
 Now, it's simple example, but say you want to go through here,
