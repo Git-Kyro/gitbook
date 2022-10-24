@@ -16,6 +16,13 @@ alias ll='ls -Gl'
 alias wget='/opt/homebrew/Cellar/wget/1.21.3/bin/wget'
 alias brew='/opt/homebrew/bin/brew'
 alias tree='/opt/homebrew/Cellar/tree/2.0.2/bin/tree'
+
+
+SSH Tunnel
+ssh -L 127.0.0.1:8080:10.211.55.5:80 root@10.211.55.5
+
+check port ugage
+netstat -anp tcp | grep LISTEN
 ```
 
  Move and resize windows in macOS using keyboard shortcuts or snap areas [Rectangle](https://rectangleapp.com/)
