@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>k8s explain · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="english-kubernetes-explain-transration.html" />
+    
+    
+    <link rel="prev" href="macbook-m1-pro.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="create-gitbook.html">
+            
+                <a href="create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Linux/centos-system.html">
+            
+                <a href="Linux/centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Linux/centos-upgrade-kernel.html">
+            
+                <a href="Linux/centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Linux/nginx.html">
+            
+                <a href="Linux/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Linux/novnc.html">
+            
+                <a href="Linux/novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="kubernetes-develop/k8s-command.html">
+            
+                <a href="kubernetes-develop/k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="kubernetes-develop/k8s-api.html">
+            
+                <a href="kubernetes-develop/k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="kubernetes-develop/k8s-scheme.html">
+            
+                <a href="kubernetes-develop/k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="kubernetes-develop/k8s-clientset.html">
+            
+                <a href="kubernetes-develop/k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="exec-shell.html">
+            
+                <a href="exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="interface.html">
+            
+                <a href="interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="terraform/terraform-example.html">
+            
+                <a href="terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="macbook-m1-pro.html">
+            
+                <a href="macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="english-kubernetes-explain.html">
+            
+                <a href="english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="english-kubernetes-explain-transration.html">
+            
+                <a href="english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="english-kubernetes-operator.html">
+            
+                <a href="english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >k8s explain</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Kubernetes explain</p>
+<pre><code class="lang-text">Hi everyone, my name is Sai Vennam
+and I&apos;m a developer advocate with IBM
+Today, I&apos;m back with another video
+where I&apos;m going to be talking about all things Kubernetes.
+Kubernetes as an orchestration tool
+allowing you to run and manage your container-based workloads
+today, I want to take a high-level look
+at  a reference architecture of managed Kubernetes services
+and dive a little bit deeper about how you would do a deployment of your micro-services.
+Let&apos;s get started here.
+So, we&apos;ve got here, sketched out, two sides of the puzzle.
+On the left side here, we&apos;ve got the cloud side,
+and what we&apos;ve got here is a very important component 
+that&apos;s going to be the Kubernetes master.
+The Kubernetes master has a lot of important components in it,
+but the most important piece \
+                        that we want to talk about today is going to be the API server.
+The Kubernetes API server running on the master is integral \
+                    to running all of your workloads and exposes a set of capabilities,
+allowing us to define exactly how we want to run our workloads.
+On the right side here, on the customer-managed side,
+we&apos;ve got our worker nodes,
+which are all also Kubernetes-based.
+There&apos;s one major component that i want to point \
+                                    our running on every single Kubernetes worker node,
+and that&apos;s going to be the kubelet.
+The kubelet, essentially, is responsible for scheduling and \
+                        making sure apps are healthy and running within our worker nodes.
+You can imagine that the master and the kubelet are \
+                                                going to be working together quite often.
+Let&apos;s take a step back.
+Why would someone want to start using Kubernetes?
+Well, maybe they have some micro-services that make up a cloud-native application.
+As we all know, micro-services are talking to each other over the network.
+To really simplify this example,
+let&apos;s say we&apos;ve got a frontend and a backend,
+and those are the two components that we want to scale out and \
+                                                        deploy to that cluster today.
+So, Kubernetes uses YAML to define the resources that are sent to the API server,
+which end up creating the actual application.
+So, let&apos;s get started with that by sketching out a simple YAML for deploying a pod.
+A pod is a really small logical unit which allows you to run \
+                                                    a simple container in worker node.
+So, we&apos;ll start with that.
+Let&apos;s say we&apos;ve got a pod, and what we need is an image that&apos;s associated with it.
+Let&apos;s say that it&apos;s a container, 
+we&apos;ve already pushed up to Docker Hub,
+and we&apos;ll use my registry for this one.
+And, let&apos;s say the name for the application is just &quot;f&quot; for frontend - version 1.
+And one more thing that we want to add here,
+let&apos;s just say we&apos;ve got labels.
+Labels are very important,
+and we&apos;ll talk about why in a second here,
+but they allow us to define exactly what the type of artifact we&apos;ve got here is.
+So, for the labels, we&apos;ll just say the application is &quot;f&quot; for &quot;frontend&quot;.
+Alright, so we&apos;ve got that created,
+and what we want to do is push it through our process to get into a worker node.
+What we&apos;ve got here is kubectl.
+Using that, we&apos;re gonna be able to deploy the simple manifest that we&apos;ve got \
+                                                and have it in one of our worker nodes.
+So, we&apos;ll push the manifest through kubectl,
+it hits the API running on the Kubernetes master,
+and that, in turn, is going to go and talk to one of the kubelets 
+because we just want to deploy one of these pods and start it up.
+So, taking a look,
+let&apos;s say that it starts it up in our first worker node here with the label \
+                                            that we&apos;ve given it: &quot;application is frontend&quot;.
+And one thing to note here: it actually does get an IP address as well.
+Let&apos;s say we get an internal IP address that ends in a &quot;.1&quot;.
+So, at this point, i could SSH into any of the worker nodes and \
+                                                use that IP address to hit that application.
+So, that&apos;s great for deploying a simple application;
+let&apos;s take it a step further.
+Kubernetes has an abstraction called deployments,
+allowing us to do something and create something called a &quot;desired state&quot;.
+So, we can define the number of replicas we want for that pod,
+and if something were to happen to the pod and it dies,
+it would create a new one for us.
+So, we&apos;ve got the pod labeled as &quot;application is frontend&quot;,
+and we want to say that we want to create, maybe, three replicas of that.
+So, going back to our manifest here.
+One thing we need to do is tell Kubernetes that we don&apos;t want a pod,
+we want the template for a pod.
+So, we&apos;ll scratch that out,
+and we&apos;ll create a template for a pod .
+On top of that, we&apos;ve got a few other things that we want.
+So, the number of replicas - let&apos;s say we want three.
+We&apos;ve got a selector.
+So, we want to tell this deployment to manage any application deployed with \
+                                                                that kind of name here.
+We&apos;ll say match that selector here.
+Again, this is not entirely valid YAML -
+I just want give you an idea of the kind of artifacts that Kubernetes is looking for.
+The last thing that we&apos;ve got here is,
+What kind of artifact is this?
+And this is going to be a deployment.
+Alright, so we&apos;ve scratched out that pod and we&apos;ve got a new manifest here.
+What it&apos;s going to do: we&apos;re going to push it through kubectl,
+it hits the API server.
+Now it&apos;s not an ephemeral kind of object -
+Kubernetes needs to manage the desired state -
+so what is going to do is,
+it&apos;s going to manage that deployment for as long as we have \
+                                                that deployment and we don&apos;t delete it.
+it&apos;s going to manage that here.
+So, we&apos;ll say that it creates a deployment, 
+and since we&apos;ve got three replicas,
+it&apos;s always going to ensure that we&apos;ve got three running.
+As soon as we&apos;ve got the deployment created, we realize,
+Hey, something&apos;s wrong, we&apos;ve only got one, we need two more.
+So, what it&apos;s going to do 
+is it&apos;s going to schedule out deploying that application
+wherever it has resources.
+We&apos;ve got a lot of resources still -
+most of these worker nodes are empty,
+so it decides to put one in each of the different nodes.
+So, we&apos;ve got the deployment created,
+and let&apos;s just say we do the same thing for our backend here.
+So, we&apos;ll create another application deployment: application is backend.
+And for this one, let&apos;s just scale it out two times.
+So, we&apos;ll go here: &quot;application is backend&quot;.
+And everyone&apos;s happy.
+Now we need to start thinking about communication between these services.
+We talked about how every pod has an IP address,
+but we also mentioned that some of these pods might die.
+Maybe you&apos;ll have to update them at some point.
+When a pod goes away and comes back it actually has a different IP address.
+So, if we want to access one of those pods from the backend or even for external uses,
+we need an IP address that we can rely on.
+And this is a problem that&apos;s been around for a while,
+and service registry and service discovery capabilities \
+                                                    were created to solve exactly that.
+That comes built-in with Kubernetes.
+So, what we&apos;re gonna do now is create a service to actually \
+                                                        create a more stable IP address
+so we can access our pods as a singular application,
+rather than individual different services.
+SO, to do that, we&apos;re gonna take a step back here,
+and we&apos;re going to create a service definition around those three pods.
+To do that, we&apos;re going to need some more manifest YAML.
+So, we&apos;ll go back here and create a new section in our file.
+This time we&apos;ve got a kind: service.
+And we&apos;re going to need a selector on that.
+Again, that&apos;s going to match the label that we&apos;ve got here.
+And, the last thing that we need here is a type.
+So, how do we want to actually expose this?
+But we&apos;ll get to that in a second.
+By default, that type is going to be cluster IP,
+meaning our service can be accessed from inside the cluster.
+So, deploying that through kubectl,
+it hits our master, goes over here,
+and creates that abstraction we talked about.
+We can say that we created another one for the backend as well.
+So, what we get now is a cluster IP.
+Let&apos;s just say &quot;CLIP&quot; for short -
+and that&apos;s going to be an internal IP.
+Say, it ends in a 5.
+And then another cluster IP for our other service here.
+And, we&apos;ll say that ends in &quot;.6&quot;.
+So, now we have an IP that we can use to reliably do \
+                                        communication between these services.
+In addition, the KubeDNS service,
+which is usually running by default,
+will make it even easier for these services to access each other.
+They can just use their names.
+So, they could hit each other using the name &quot;frontend&quot;.
+&quot;backend&quot; - or &quot;F&quot; or &quot;B&quot; for short.
+So, we&apos;ve got that and we talked about how now the services can talk to each other,
+by using these cluster IPs.
+So, communication within the clusters is solved.
+To do that, what we&apos;ll need to do is define the type of this service,
+and what we want is a load balancer.
+There are actually other ways to expose, like node ports as well,
+but a load balancer, essentially that it&apos;s going to do,
+where this is internal to actual Kubernetes worker nodes,
+we can create an external IP now.
+And this might be, let&apos;s say, a 169 address.
+And now, what we can do is expose that directly to end-users 
+so that they can access that frontend by directly using that service.
+We&apos;ve talked about 3 major components here today.
+We&apos;ve got pods.
+Pods, which are then deployed and managed by deployments.
+And then, facilitating access to those pods created by those deployments using services.
+Those are the 3 major components working together with \
+                                        the Kubernetes master and all the worker nodes
+to allow you to really redefine your DevOps workflow for deploying your applications \
+                                                    into a managed Kubernetes service.
+i know we talked about a lot today
+but we want to get into more in-depth topics in our future light boarding videos.
+for example, something like deployments.
+So, feel free to drop a comment below,
+leave us any feedback,
+definitely subscribe, 
+and stay tuned for more light boarding videos in the future
+and thank you so much for joining me today.
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="macbook-m1-pro.html" class="navigation navigation-prev " aria-label="Previous page: MacBook-m1-pro">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="english-kubernetes-explain-transration.html" class="navigation navigation-next " aria-label="Next page: k8s explain transration">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"k8s explain","level":"1.8.2","depth":2,"next":{"title":"k8s explain transration","level":"1.8.3","depth":2,"path":"articles/english-kubernetes-explain-transration.md","ref":"./articles/english-kubernetes-explain-transration.md","articles":[]},"previous":{"title":"MacBook-m1-pro","level":"1.8.1","depth":2,"path":"articles/macbook-m1-pro.md","ref":"./articles/macbook-m1-pro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/english-kubernetes-explain.md","mtime":"2022-12-13T01:16:38.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

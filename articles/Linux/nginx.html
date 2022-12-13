@@ -1,0 +1,682 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Nginx · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="novnc.html" />
+    
+    
+    <link rel="prev" href="centos-upgrade-kernel.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../create-gitbook.html">
+            
+                <a href="../create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="centos-system.html">
+            
+                <a href="centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="centos-upgrade-kernel.html">
+            
+                <a href="centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="novnc.html">
+            
+                <a href="novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../kubernetes-develop/k8s-command.html">
+            
+                <a href="../kubernetes-develop/k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../kubernetes-develop/k8s-api.html">
+            
+                <a href="../kubernetes-develop/k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../kubernetes-develop/k8s-scheme.html">
+            
+                <a href="../kubernetes-develop/k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../kubernetes-develop/k8s-clientset.html">
+            
+                <a href="../kubernetes-develop/k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../exec-shell.html">
+            
+                <a href="../exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../terraform/terraform-example.html">
+            
+                <a href="../terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../macbook-m1-pro.html">
+            
+                <a href="../macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../english-kubernetes-explain.html">
+            
+                <a href="../english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../english-kubernetes-explain-transration.html">
+            
+                <a href="../english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../english-kubernetes-operator.html">
+            
+                <a href="../english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Nginx</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#nginx"><b></b>Nginx</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="nginx"><a name="nginx" class="anchor-navigation-ex-anchor" href="#nginx"><i class="fa fa-link" aria-hidden="true"></i></a>Nginx</h2>
+<p>nginx&#x90E8;&#x7F72;</p>
+<p>&#x4F9D;&#x8D56;&#x5305;</p>
+<pre><code class="lang-sh">yum install -y gcc gcc-c++ autoconf automake openssl openssl-devel pcre pcre-devel bzip2 lsof zlib-devel  libtool libtool-* git unzip
+</code></pre>
+<p>&#x7F16;&#x8BD1;</p>
+<pre><code class="lang-sh">wget http://nginx.org/download/nginx-1.14.2.tar.gz
+./configure --prefix=/usr/<span class="hljs-built_in">local</span>/nginx --user=admin --group=admin    --with-http_ssl_module --with-http_flv_module --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module   --with-http_v2_module --add-module=/srv/ngx_http_geoip2_module-master
+</code></pre>
+<p>--with-http_flv_module &#x6D41;&#x5A92;&#x4F53;&#x64AD;&#x653E;&#x652F;&#x6301;
+ngx_http_geoip2_module &#x5C4F;&#x853D;&#x67D0;&#x4E2A;&#x5730;&#x533A;&#x7684; IP &#x8BBF;&#x95EE;&#xFF0C;&#x6216;&#x8005;&#x6839;&#x636E;&#x8BBF;&#x95EE;&#x6765;&#x6E90;&#x8F6C;&#x5411;&#x4E0D;&#x540C;&#x7684;&#x5B50;&#x7AD9;&#x5B9E;&#x73B0;&#x5206;&#x6D41;</p>
+<pre><code class="lang-sh">wget http://zlib.net/zlib-1.2.11.tar.gz
+./configure --prefix=/usr/<span class="hljs-built_in">local</span>/zlib
+make
+make install
+</code></pre>
+<pre><code class="lang-sh">wget https://www.openssl.org/<span class="hljs-built_in">source</span>/openssl-1.0.2j.tar.gz
+./configure --prefix=/usr/<span class="hljs-built_in">local</span>/openssl
+make
+make install
+</code></pre>
+<pre><code class="lang-sh">git <span class="hljs-built_in">clone</span> --recursive https://github.com/maxmind/libmaxminddb
+./configure (&#x4E0D;&#x8981;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;)
+make
+make install
+</code></pre>
+<p>wget <a href="https://codeload.github.com/leev/ngx_http_geoip2_module/zip/master" target="_blank">https://codeload.github.com/leev/ngx_http_geoip2_module/zip/master</a></p>
+<p>&#x5F00;&#x673A;&#x81EA;&#x542F;  </p>
+<pre><code class="lang-sh">vim /etc/systemd/system/nginx.service
+[Unit]
+Description=The nginx HTTP and reverse proxy server
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/usr/<span class="hljs-built_in">local</span>/openresty/nginx/logs/nginx.pid
+<span class="hljs-comment"># Nginx will fail to start if /usr/local//nginx/logs/nginx.pid already exists but has the wrong</span>
+<span class="hljs-comment"># SELinux context. This might happen when running `nginx -t` from the cmdline.</span>
+<span class="hljs-comment"># https://bugzilla.redhat.com/show_bug.cgi?id=1268621</span>
+ExecStartPre=/usr/bin/rm <span class="hljs-_">-f</span> /usr/<span class="hljs-built_in">local</span>/nginx/logs/nginx.pid
+ExecStartPre=/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx -t
+ExecStart=/usr/<span class="hljs-built_in">local</span>/nginx/sbin/nginx
+ExecReload=/bin/<span class="hljs-built_in">kill</span> <span class="hljs-_">-s</span> HUP <span class="hljs-variable">$MAINPID</span>
+KillSignal=SIGQUIT
+TimeoutStopSec=5
+KillMode=process
+PrivateTmp=<span class="hljs-literal">true</span>
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>----------------------&#x5206;&#x5272;&#x7EBF;-----------------------</p>
+<p>&#x62A5;&#x9519;</p>
+<pre><code>/usr/local/nginx/sbin/nginx: error while loading shared libraries: libmaxminddb.so.0: cannot open shared object file: No such file or directory
+</code></pre><p>&#x68C0;&#x6D4B;</p>
+<pre><code>ldd $(which /usr/local/nginx/sbin/nginx)
+
+    libmaxminddb.so.0 =&gt; not found
+</code></pre><p>&#x505A;&#x8F6F;&#x8FDE;&#x63A5;</p>
+<pre><code>ln -s /srv/libmaxminddb-1.3.2/src/.libs/libmaxminddb.so.0  /usr/lib64/libmaxminddb.so.0
+</code></pre><p>----------------------&#x5206;&#x5272;&#x7EBF;-----------------------</p>
+<p>nginx&#x6D4F;&#x89C8;&#x5668;&#x6D4F;&#x89C8;&#x6587;&#x672C;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-sh">&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6; nginx.conf &#x6DFB;&#x52A0;
+  location / {
+      root   html;
+      charset utf-8,gbk;
+      autoindex on;
+      autoindex_exact_size off;
+      autoindex_localtime on;
+      autoindex_format html;
+  }
+</code></pre>
+<pre><code class="lang-sh">vim /usr/<span class="hljs-built_in">local</span>/nginx/conf/mime.types  &#x6DFB;&#x52A0;
+    text/plain                                       <span class="hljs-built_in">log</span>;
+</code></pre>
+<p>Using Free Let&#x2019;s Encrypt SSL/TLS Certificates with NGINX</p>
+<p>Download the Let&#x2019;s Encrypt Client</p>
+<pre><code>yum -y install update  certbot python-certbot-nginx
+</code></pre><p>Set Up NGINX</p>
+<p>Specify your domain name (and variants, if any) with the server_name directive:</p>
+<pre><code>server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    root /var/www/html;
+    server_name example.com www.example.com;
+}
+</code></pre><p>Obtain the SSL/TLS Certificate</p>
+<pre><code>certbot --nginx -d example.com -d www.example.com
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="centos-upgrade-kernel.html" class="navigation navigation-prev " aria-label="Previous page: Centos upgrade kernel">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="novnc.html" class="navigation navigation-next " aria-label="Next page: Novnc">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Nginx","level":"1.3.3","depth":2,"next":{"title":"Novnc","level":"1.3.4","depth":2,"path":"articles/Linux/novnc.md","ref":"articles/Linux/novnc.md","articles":[]},"previous":{"title":"Centos upgrade kernel","level":"1.3.2","depth":2,"path":"articles/Linux/centos-upgrade-kernel.md","ref":"articles/Linux/centos-upgrade-kernel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/Linux/nginx.md","mtime":"2022-12-13T01:16:38.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

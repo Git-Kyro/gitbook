@@ -1,0 +1,660 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>K8S Clientset · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="k8s-scheme.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../create-gitbook.html">
+            
+                <a href="../create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Linux/centos-system.html">
+            
+                <a href="../Linux/centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Linux/centos-upgrade-kernel.html">
+            
+                <a href="../Linux/centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Linux/nginx.html">
+            
+                <a href="../Linux/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Linux/novnc.html">
+            
+                <a href="../Linux/novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="k8s-command.html">
+            
+                <a href="k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="k8s-api.html">
+            
+                <a href="k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="k8s-scheme.html">
+            
+                <a href="k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="k8s-clientset.html">
+            
+                <a href="k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../exec-shell.html">
+            
+                <a href="../exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../terraform/terraform-example.html">
+            
+                <a href="../terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../macbook-m1-pro.html">
+            
+                <a href="../macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../english-kubernetes-explain.html">
+            
+                <a href="../english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../english-kubernetes-explain-transration.html">
+            
+                <a href="../english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../english-kubernetes-operator.html">
+            
+                <a href="../english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >K8S Clientset</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#k8s-clientset"><b></b>K8S clientset</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="k8s-clientset"><a name="k8s-clientset" class="anchor-navigation-ex-anchor" href="#k8s-clientset"><i class="fa fa-link" aria-hidden="true"></i></a>K8S clientset</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;flag&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+    <span class="hljs-string">&quot;path/filepath&quot;</span>
+
+    metav1 <span class="hljs-string">&quot;k8s.io/apimachinery/pkg/apis/meta/v1&quot;</span>
+    <span class="hljs-string">&quot;k8s.io/client-go/kubernetes&quot;</span>
+    <span class="hljs-string">&quot;k8s.io/client-go/rest&quot;</span>
+    <span class="hljs-string">&quot;k8s.io/client-go/tools/clientcmd&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">var</span> err error
+    <span class="hljs-keyword">var</span> config *rest.Config
+    <span class="hljs-keyword">var</span> kubeconfig *<span class="hljs-keyword">string</span>
+
+    <span class="hljs-keyword">if</span> home := homeDir(); home != <span class="hljs-string">&quot;&quot;</span> {
+        kubeconfig = flag.String(<span class="hljs-string">&quot;kubeconfig&quot;</span>, filepath.Join(home, <span class="hljs-string">&quot;.kube&quot;</span>, <span class="hljs-string">&quot;config&quot;</span>), <span class="hljs-string">&quot;(optional) absolute path to the kubeconfig file&quot;</span>)
+    } <span class="hljs-keyword">else</span> {
+        kubeconfig = flag.String(<span class="hljs-string">&quot;kubeconfig&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;absolute path to the kubeconfig file&quot;</span>)
+    }
+    flag.Parse()
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528; ServiceAccount &#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#xFF08;InCluster&#x6A21;&#x5F0F;&#xFF09;</span>
+    <span class="hljs-keyword">if</span> config, err = rest.InClusterConfig(); err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-comment">// &#x4F7F;&#x7528; KubeConfig &#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;</span>
+        <span class="hljs-keyword">if</span> config, err = clientcmd.BuildConfigFromFlags(<span class="hljs-string">&quot;&quot;</span>, *kubeconfig); err != <span class="hljs-literal">nil</span> {
+            <span class="hljs-built_in">panic</span>(err.Error())
+        }
+    }
+
+    <span class="hljs-comment">// &#x521B;&#x5EFA; clientset</span>
+    clientset, err := kubernetes.NewForConfig(config)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-built_in">panic</span>(err.Error())
+    }
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528; clientsent &#x83B7;&#x53D6; Deployments</span>
+    deployments, err := clientset.AppsV1().Deployments(<span class="hljs-string">&quot;default&quot;</span>).List(metav1.ListOptions{})
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-built_in">panic</span>(err)
+    }
+    <span class="hljs-keyword">for</span> idx, deploy := <span class="hljs-keyword">range</span> deployments.Items {
+        fmt.Printf(<span class="hljs-string">&quot;%d -&gt; %s\n&quot;</span>, idx+<span class="hljs-number">1</span>, deploy.Name)
+    }
+
+}
+
+<span class="hljs-keyword">func</span> homeDir() <span class="hljs-keyword">string</span> {
+    <span class="hljs-keyword">if</span> h := os.Getenv(<span class="hljs-string">&quot;HOME&quot;</span>); h != <span class="hljs-string">&quot;&quot;</span> {
+        <span class="hljs-keyword">return</span> h
+    }
+    <span class="hljs-keyword">return</span> os.Getenv(<span class="hljs-string">&quot;USERPROFILE&quot;</span>) <span class="hljs-comment">// windows</span>
+}
+</code></pre>
+<p>&#x901A;&#x8FC7; client-go &#x63D0;&#x4F9B;&#x7684; Clientset &#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x6570;&#x636E;</p>
+<ol>
+<li><p>&#x4F7F;&#x7528; kubeconfig &#x6587;&#x4EF6;&#x6216;&#x8005; ServiceAccount&#xFF08;InCluster &#x6A21;&#x5F0F;&#xFF09;&#x6765;&#x521B;&#x5EFA;&#x8BBF;&#x95EE; Kubernetes API &#x7684; Restful &#x914D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4EE3;&#x7801;&#x4E2D;&#x7684; rest.Config &#x5BF9;&#x8C61;</p>
+</li>
+<li><p>&#x4F7F;&#x7528; rest.Config &#x53C2;&#x6570;&#x521B;&#x5EFA; Clientset &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E00;&#x6B65;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;kubernetes.NewForConfig(config)&#x5373;&#x53EF;&#x521D;&#x59CB;&#x5316;</p>
+</li>
+<li><p>&#x7136;&#x540E;&#x662F; Clientset &#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x53BB;&#x83B7;&#x53D6;&#x5404;&#x4E2A; Group &#x4E0B;&#x9762;&#x7684;&#x5BF9;&#x5E94;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x8FDB;&#x884C; CRUD &#x64CD;&#x4F5C;</p>
+</li>
+</ol>
+<p>&#x5C06;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x5C01;&#x88C5;&#x5230;&#x5168;&#x5C40;&#x7684; Clientset &#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3; </p>
+<p><img src="../../images/k8s-clientset-1.drawio.png" alt="picture"></p>
+<p>Deployment &#x5B9E;&#x73B0; Clientset &#x7684;&#x63A5;&#x53E3;</p>
+<p><img src="../../images/k8s-clientset-2.drawio.png" alt="picture"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="k8s-scheme.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: K8S Scheme">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"K8S Clientset","level":"1.4.4","depth":2,"next":{"title":"About Python","level":"1.5","depth":1,"ref":"","articles":[{"title":"Exec Shell","level":"1.5.1","depth":2,"path":"articles/exec-shell.md","ref":"./articles/exec-shell.md","articles":[]}]},"previous":{"title":"K8S Scheme","level":"1.4.3","depth":2,"path":"articles/kubernetes-develop/k8s-scheme.md","ref":"./articles/kubernetes-develop/k8s-scheme.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/kubernetes-develop/k8s-clientset.md","mtime":"2022-12-13T01:16:38.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

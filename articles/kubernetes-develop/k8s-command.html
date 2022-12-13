@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>K8S Command · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="k8s-api.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../create-gitbook.html">
+            
+                <a href="../create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Linux/centos-system.html">
+            
+                <a href="../Linux/centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Linux/centos-upgrade-kernel.html">
+            
+                <a href="../Linux/centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Linux/nginx.html">
+            
+                <a href="../Linux/nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Linux/novnc.html">
+            
+                <a href="../Linux/novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="k8s-command.html">
+            
+                <a href="k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="k8s-api.html">
+            
+                <a href="k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="k8s-scheme.html">
+            
+                <a href="k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="k8s-clientset.html">
+            
+                <a href="k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../exec-shell.html">
+            
+                <a href="../exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../terraform/terraform-example.html">
+            
+                <a href="../terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../macbook-m1-pro.html">
+            
+                <a href="../macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../english-kubernetes-explain.html">
+            
+                <a href="../english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../english-kubernetes-explain-transration.html">
+            
+                <a href="../english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../english-kubernetes-operator.html">
+            
+                <a href="../english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >K8S Command</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#k8s-command"><b></b>K8S Command</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="k8s-command"><a name="k8s-command" class="anchor-navigation-ex-anchor" href="#k8s-command"><i class="fa fa-link" aria-hidden="true"></i></a>K8S Command</h2>
+<p>&#x547D;&#x4EE4;&#x884C;&#x5F3A;&#x5236;&#x5220;&#x9664;namespace&#x4E0B;&#x6240;&#x6709;pod</p>
+<pre><code class="lang-sh">kubectl get namespace <span class="hljs-string">&quot;rook-ceph&quot;</span> -o json | tr <span class="hljs-_">-d</span> <span class="hljs-string">&quot;\n&quot;</span> | sed <span class="hljs-string">&quot;s/\&quot;finalizers\&quot;: \[[^]]\+\]/\&quot;finalizers\&quot;: []/&quot;</span> | kubectl replace --raw /api/v1/namespaces/rook-ceph/finalize <span class="hljs-_">-f</span> -
+kubectl delete pod [pod_name] -n [namespace] --force --grace-period=0
+</code></pre>
+<p>&#x8C03;&#x7528;&#x5F3A;&#x5236;&#x5220;&#x9664;namespace&#x4E0B;&#x6240;&#x6709;pod</p>
+<pre><code class="lang-sh">NAMESPACE=rook-ceph
+kubectl proxy &amp;
+kubectl get namespace <span class="hljs-variable">$NAMESPACE</span> -o json |jq <span class="hljs-string">&apos;.spec = {&quot;finalizers&quot;:[]}&apos;</span> &gt;temp.json
+curl -k -H <span class="hljs-string">&quot;Content-Type: application/json&quot;</span> -X PUT --data-binary @temp.json 127.0.0.1:8001/api/v1/namespaces/<span class="hljs-variable">$NAMESPACE</span>/finalize
+</code></pre>
+<p>&#x5F3A;&#x5236;&#x5220;&#x9664;NAMESPACE</p>
+<pre><code class="lang-sh">kubectl delete namespace NAMESPACENAME --force --grace-period=0
+</code></pre>
+<p>&#x5F3A;&#x5236;&#x5220;&#x9664;POD</p>
+<pre><code class="lang-sh">kubectl delete pod PODNAME --force --grace-period=0
+</code></pre>
+<p>&#x5220;&#x9664;default namespace&#x4E0B;&#x7684;pod&#x540D;&#x4E3A;pod-to-be-deleted-0</p>
+<pre><code class="lang-sh">ETCDCTL_API=3 etcdctl del /registry/pods/default/pod-to-be-deleted-0
+</code></pre>
+<p>&#x5220;&#x9664;&#x9700;&#x8981;&#x5220;&#x9664;&#x7684;NAMESPACE</p>
+<pre><code class="lang-sh">etcdctl del /registry/namespaces/NAMESPACENAME
+</code></pre>
+<p>&#x5220;&#x9664;pv</p>
+<pre><code class="lang-sh">kubectl patch pv pvc-9cb42231-1<span class="hljs-built_in">cd</span>0-452a-86c0-ef4e45ca4eb2 -p <span class="hljs-string">&apos;{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}&apos;</span>
+</code></pre>
+<p>&#x5BFC;&#x5165;&#x672C;&#x5730;&#x955C;&#x50CF;</p>
+<pre><code class="lang-sh">ctr -n=k8s.io image import app.tar
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="k8s-api.html" class="navigation navigation-next navigation-unique" aria-label="Next page: K8S API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"K8S Command","level":"1.4.1","depth":2,"next":{"title":"K8S API","level":"1.4.2","depth":2,"path":"articles/kubernetes-develop/k8s-api.md","ref":"./articles/kubernetes-develop/k8s-api.md","articles":[]},"previous":{"title":"About Kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"K8S Command","level":"1.4.1","depth":2,"path":"articles/kubernetes-develop/k8s-command.md","ref":"./articles/kubernetes-develop/k8s-command.md","articles":[]},{"title":"K8S API","level":"1.4.2","depth":2,"path":"articles/kubernetes-develop/k8s-api.md","ref":"./articles/kubernetes-develop/k8s-api.md","articles":[]},{"title":"K8S Scheme","level":"1.4.3","depth":2,"path":"articles/kubernetes-develop/k8s-scheme.md","ref":"./articles/kubernetes-develop/k8s-scheme.md","articles":[]},{"title":"K8S Clientset","level":"1.4.4","depth":2,"path":"articles/kubernetes-develop/k8s-clientset.md","ref":"./articles/kubernetes-develop/k8s-clientset.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/kubernetes-develop/k8s-command.md","mtime":"2022-12-13T01:16:38.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

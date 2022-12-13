@@ -1,0 +1,657 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Novnc · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="nginx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../create-gitbook.html">
+            
+                <a href="../create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="centos-system.html">
+            
+                <a href="centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="centos-upgrade-kernel.html">
+            
+                <a href="centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="novnc.html">
+            
+                <a href="novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../kubernetes-develop/k8s-command.html">
+            
+                <a href="../kubernetes-develop/k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../kubernetes-develop/k8s-api.html">
+            
+                <a href="../kubernetes-develop/k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../kubernetes-develop/k8s-scheme.html">
+            
+                <a href="../kubernetes-develop/k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../kubernetes-develop/k8s-clientset.html">
+            
+                <a href="../kubernetes-develop/k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../exec-shell.html">
+            
+                <a href="../exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../terraform/terraform-example.html">
+            
+                <a href="../terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../macbook-m1-pro.html">
+            
+                <a href="../macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../english-kubernetes-explain.html">
+            
+                <a href="../english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../english-kubernetes-explain-transration.html">
+            
+                <a href="../english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../english-kubernetes-operator.html">
+            
+                <a href="../english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Novnc</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#novnc"><b></b>Novnc</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="novnc"><a name="novnc" class="anchor-navigation-ex-anchor" href="#novnc"><i class="fa fa-link" aria-hidden="true"></i></a>Novnc</h2>
+<p>web site remote Linux Desktop</p>
+<p>&#x5982;&#x679C;&#x60F3; Remote &#x5230; Docker &#x91CC;&#x9762;&#x7684; Centos, &#x5148;&#x7528; Docker &#x542F;&#x52A8; Centos</p>
+<p>&#x5982;&#x679C;&#x60F3; Romte &#x5230; VM &#x5FFD;&#x7565;&#x4E0B;&#x9762;&#x7684; Docker &#x542F;&#x52A8;&#xFF0C;&#x76F4;&#x63A5;&#x5B89;&#x88C5; VNC &#x5F00;&#x59CB;&#x6267;&#x884C;</p>
+<pre><code class="lang-sh">docker pull centos:7.9.2009
+docker run -itd --privileged --name centos7.9_vnc -p 5901:5901 -p 6901:6901 centos:7.9.2009 /usr/sbin/init
+docker <span class="hljs-built_in">exec</span> -it centos7.9_vnc bash
+</code></pre>
+<p>&#x5B89;&#x88C5; VNC</p>
+<pre><code class="lang-sh">curl -L https://gitee.com/panchongwen/my_scripts/raw/main/linux/centos7_vnc_install.sh -o centos7_vnc_install.sh
+
+<span class="hljs-comment"># &#x66F4;&#x6539; noVNC &#x7248;&#x672C;</span>
+<span class="hljs-comment"># git clone https://github.com.cnpmjs.org/novnc/noVNC.git</span>
+<span class="hljs-comment"># &#x6539;&#x4E3A; git clone https://github.com/novnc/noVNC.git -b v1.2.0</span>
+
+<span class="hljs-comment"># git clone https://github.com.cnpmjs.org/novnc/websockify</span>
+<span class="hljs-comment"># &#x6539;&#x4E3A; git clone https://github.com/novnc/websockify</span>
+bash ./centos7_vnc_install.sh  <span class="hljs-comment"># &#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x9700;&#x8981;&#x8F93;&#x5165;&#x767B;&#x9646; VNC &#x7684;&#x5BC6;&#x7801;</span>
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x72B6;&#x6001;</p>
+<pre><code class="lang-sh">systemctl status vncserver@:1.service
+systemctl status novnc@:1.service
+</code></pre>
+<p>&#x8FDC;&#x7A0B;&#x767B;&#x9646;: <a href="http://127.0.0.1:6901" target="_blank">http://127.0.0.1:6901</a> # &#x4F1A;&#x63D0;&#x793A;&#x8F93;&#x5165;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x767B;&#x9646; VNC &#x7684;&#x5BC6;&#x7801;</p>
+<p>&#x8BBE;&#x7F6E; vncserver &#x9002;&#x914D;&#x5C4F;&#x5E55;</p>
+<pre><code class="lang-sh">vim /usr/bin/vncserver_wrapper
+/usr/sbin/runuser <span class="hljs-_">-l</span> <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span>&quot;</span> -c <span class="hljs-string">&quot;/usr/bin/vncserver <span class="hljs-variable">${INSTANCE}</span> -geometry 1700x1300&quot;</span>
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE; web &#x9875;&#x9762;&#x767B;&#x9646;&#x5BC6;&#x7801;</p>
+<pre><code class="lang-sh">yum -y install httpd-tools
+htpasswd -c /etc/htpasswd Kyro
+</code></pre>
+<p>&#x901A;&#x8FC7; nginx &#x4EE3;&#x7406; novnc</p>
+<pre><code class="lang-sh">[root@instance-2 ~]<span class="hljs-comment"># cat /etc/nginx/conf.d/novnc.conf</span>
+server {
+    server_name  novnc.localhost.com;
+    root         /usr/share/nginx/html;
+
+    listen [::]:443 ssl ipv6only=on; <span class="hljs-comment"># managed by Certbot</span>
+    listen 443 ssl; <span class="hljs-comment"># managed by Certbot</span>
+    ssl_certificate /etc/letsencrypt/live/novnc.localhost.com/fullchain.pem; <span class="hljs-comment"># managed by Certbot</span>
+    ssl_certificate_key /etc/letsencrypt/live/novnc.localhost.com/privkey.pem; <span class="hljs-comment"># managed by Certbot</span>
+    include /etc/letsencrypt/options-ssl-nginx.conf; <span class="hljs-comment"># managed by Certbot</span>
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; <span class="hljs-comment"># managed by Certbot</span>
+    location / {
+            auth_basic           <span class="hljs-string">&quot;Administrator&#x2019;s Area&quot;</span>;
+            auth_basic_user_file /etc/htpasswd;
+            proxy_http_version 1.1;
+            proxy_<span class="hljs-built_in">set</span>_header Upgrade <span class="hljs-variable">$http_upgrade</span>;
+            proxy_<span class="hljs-built_in">set</span>_header Connection <span class="hljs-string">&quot;upgrade&quot;</span>;
+            proxy_pass http://127.0.0.1:6901;
+            proxy_buffering off;
+            proxy_connect_timeout  3600s;
+            proxy_<span class="hljs-built_in">read</span>_timeout  3600s;
+            proxy_send_timeout  3600s;
+            send_timeout  3600s;
+    }
+}
+server {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$host</span> = novnc.localhost.com) {
+        <span class="hljs-built_in">return</span> 301 https://<span class="hljs-variable">$host</span><span class="hljs-variable">$request_uri</span>;
+    } <span class="hljs-comment"># managed by Certbot</span>
+        listen       80;
+        listen       [::]:80;
+        server_name  novnc.localhost.com;
+    <span class="hljs-built_in">return</span> 404; <span class="hljs-comment"># managed by Certbot</span>
+}
+</code></pre>
+<p>&#x53C2;&#x8003;&#x8FDE;&#x63A5; <a href="https://zhuanlan.zhihu.com/p/378723906" target="_blank">https://zhuanlan.zhihu.com/p/378723906</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="nginx.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Nginx">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Novnc","level":"1.3.4","depth":2,"next":{"title":"About Kubernetes","level":"1.4","depth":1,"ref":"","articles":[{"title":"K8S Command","level":"1.4.1","depth":2,"path":"articles/kubernetes-develop/k8s-command.md","ref":"./articles/kubernetes-develop/k8s-command.md","articles":[]},{"title":"K8S API","level":"1.4.2","depth":2,"path":"articles/kubernetes-develop/k8s-api.md","ref":"./articles/kubernetes-develop/k8s-api.md","articles":[]},{"title":"K8S Scheme","level":"1.4.3","depth":2,"path":"articles/kubernetes-develop/k8s-scheme.md","ref":"./articles/kubernetes-develop/k8s-scheme.md","articles":[]},{"title":"K8S Clientset","level":"1.4.4","depth":2,"path":"articles/kubernetes-develop/k8s-clientset.md","ref":"./articles/kubernetes-develop/k8s-clientset.md","articles":[]}]},"previous":{"title":"Nginx","level":"1.3.3","depth":2,"path":"articles/Linux/nginx.md","ref":"articles/Linux/nginx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/Linux/novnc.md","mtime":"2022-12-13T01:16:38.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

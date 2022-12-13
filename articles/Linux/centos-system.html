@@ -1,0 +1,656 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Centos system · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="centos-upgrade-kernel.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    About GitBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../create-gitbook.html">
+            
+                <a href="../create-gitbook.html">
+            
+                    
+                    Create GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    About Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="centos-system.html">
+            
+                <a href="centos-system.html">
+            
+                    
+                    Centos system
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="centos-upgrade-kernel.html">
+            
+                <a href="centos-upgrade-kernel.html">
+            
+                    
+                    Centos upgrade kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="nginx.html">
+            
+                <a href="nginx.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="novnc.html">
+            
+                <a href="novnc.html">
+            
+                    
+                    Novnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    About Kubernetes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../kubernetes-develop/k8s-command.html">
+            
+                <a href="../kubernetes-develop/k8s-command.html">
+            
+                    
+                    K8S Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../kubernetes-develop/k8s-api.html">
+            
+                <a href="../kubernetes-develop/k8s-api.html">
+            
+                    
+                    K8S API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../kubernetes-develop/k8s-scheme.html">
+            
+                <a href="../kubernetes-develop/k8s-scheme.html">
+            
+                    
+                    K8S Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../kubernetes-develop/k8s-clientset.html">
+            
+                <a href="../kubernetes-develop/k8s-clientset.html">
+            
+                    
+                    K8S Clientset
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    About Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../exec-shell.html">
+            
+                <a href="../exec-shell.html">
+            
+                    
+                    Exec Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    About Golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../interface.html">
+            
+                <a href="../interface.html">
+            
+                    
+                    Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    About Terraform
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../terraform/terraform-example.html">
+            
+                <a href="../terraform/terraform-example.html">
+            
+                    
+                    Terraform summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    About MacBook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../macbook-m1-pro.html">
+            
+                <a href="../macbook-m1-pro.html">
+            
+                    
+                    MacBook-m1-pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../english-kubernetes-explain.html">
+            
+                <a href="../english-kubernetes-explain.html">
+            
+                    
+                    k8s explain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../english-kubernetes-explain-transration.html">
+            
+                <a href="../english-kubernetes-explain-transration.html">
+            
+                    
+                    k8s explain transration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../english-kubernetes-operator.html">
+            
+                <a href="../english-kubernetes-operator.html">
+            
+                    
+                    k8s operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Centos system</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#centos"><b></b>Centos</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="centos"><a name="centos" class="anchor-navigation-ex-anchor" href="#centos"><i class="fa fa-link" aria-hidden="true"></i></a>Centos</h2>
+<p>&#x4FEE;&#x6539;&#x4E3B;&#x673A;&#x540D;</p>
+<pre><code class="lang-sh">hostnamectl --static <span class="hljs-built_in">set</span>-hostname CentOS-name
+</code></pre>
+<p>&#x4E3B;&#x673A;&#x540D;&#x989C;&#x8272;&#x8BBE;&#x7F6E; /root/.bashrc &#x6DFB;&#x52A0;</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">export</span> PS1=<span class="hljs-string">&quot;\[\e[36;1m\][\u@\h \W]#\[\e[0m\]&quot;</span>
+</code></pre>
+<p>date 24&#x5C0F;&#x65F6;&#x663E;&#x793A;&#x8BBE;&#x7F6E;</p>
+<pre><code class="lang-sh">timedatectl <span class="hljs-built_in">set</span>-timezone Asia/Shanghai
+</code></pre>
+<p>&#x641C;&#x7D22;10&#x5929;&#x4E4B;&#x524D;&#x7684;log&#x65E5;&#x5FD7;,&#x5E76;&#x5220;&#x9664;</p>
+<pre><code class="lang-sh">find ./ -mtime +10 -name <span class="hljs-string">&quot;*.log*&quot;</span> -exec rm <span class="hljs-_">-f</span> {} \;
+</code></pre>
+<p>&#x78C1;&#x76D8;&#x6E05;&#x7406;</p>
+<pre><code class="lang-sh">/var/spool/clientmqueue &#x662F;&#x90AE;&#x4EF6;&#x6682;&#x5B58;&#x533A;  
+/etc/init.d/sendmail start&#x628A;sendmail&#x670D;&#x52A1;&#x542F;&#x8D77;&#x6765;
+ du -h --max-depth=1 &#x67E5;&#x770B;&#x5355;&#x4E2A;&#x76EE;&#x5F55;&#x5927;&#x5C0F;
+ -bash: /bin/rm: Argument list too long
+ ls|xargs rm <span class="hljs-_">-f</span>
+</code></pre>
+<p> &#x67E5;&#x770B;docker&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-sh"> docker system df
+</code></pre>
+<p> &#x7528;&#x4E8E;&#x6E05;&#x7406;&#x78C1;&#x76D8;&#xFF0C;&#x5220;&#x9664;&#x5173;&#x95ED;&#x7684;&#x5BB9;&#x5668;&#x3001;&#x65E0;&#x7528;&#x7684;&#x6570;&#x636E;&#x5377;&#x548C;&#x7F51;&#x7EDC;</p>
+<pre><code class="lang-sh"> docker system prune
+</code></pre>
+<p> &#x6E05;&#x7406;&#x5F97;&#x66F4;&#x52A0;&#x5F7B;&#x5E95;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6CA1;&#x6709;&#x5BB9;&#x5668;&#x4F7F;&#x7528; Docker &#x955C;&#x50CF;&#x90FD;&#x5220;&#x6389;</p>
+<pre><code class="lang-sh"> docker system prune <span class="hljs-_">-a</span>
+</code></pre>
+<p>&#x624B;&#x5DE5;&#x6E05;&#x7406;,&#x5220;&#x9664;&#x6240;&#x6709;&#x60AC;&#x7A7A;&#x955C;&#x50CF;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x672A;&#x4F7F;&#x7528;&#x955C;&#x50CF;</p>
+<pre><code class="lang-sh">docker rmi $(docker images <span class="hljs-_">-f</span> <span class="hljs-string">&quot;dangling=true&quot;</span> -q)
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x6709;&#x672A;&#x4F7F;&#x7528;&#x955C;&#x50CF;&#x548C;&#x60AC;&#x7A7A;&#x955C;&#x50CF;&#x3002;</p>
+<pre><code class="lang-sh">docker rmi $(docker images-q)
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x6709;&#x672A;&#x88AB;&#x4EFB;&#x4F55;&#x5BB9;&#x5668;&#x5173;&#x8054;&#x5F15;&#x7528;&#x7684;&#x5377;&#xFF1A;</p>
+<pre><code class="lang-sh">docker volume rm $(docker volume ls -qf dangling=<span class="hljs-literal">true</span>)
+docker volume rm $(docker volume ls -q)
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x6709;&#x5DF2;&#x9000;&#x51FA;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-sh">docker rm -v $(docker ps -aq <span class="hljs-_">-f</span> status=exited)
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x6709;&#x72B6;&#x6001;&#x4E3A; dead &#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-sh">docker rm -v $(docker ps -aq <span class="hljs-_">-f</span> status=dead)
+</code></pre>
+<p>/etc/sysctl.conf</p>
+<pre><code class="lang-sh">net.ipv4.ip_forward=1
+fs.nr_open=100000000
+fs.file-max = 1048576
+net.ipv4.tcp_max_tw_buckets = 180000
+net.ipv4.tcp_retries2 = 5
+net.core.rmem_max = 67108864
+net.core.wmem_max = 67108864
+net.core.netdev_max_backlog = 250000
+net.core.somaxconn = 4096
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_keepalive_time = 1200
+net.ipv4.ip_<span class="hljs-built_in">local</span>_port_range = 10000 65000
+net.ipv4.tcp_max_syn_backlog = 8192
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_rmem = 4096 87380 67108864
+net.ipv4.tcp_wmem = 4096 65536 67108864
+net.ipv4.tcp_mtu_probing = 1
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="centos-upgrade-kernel.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Centos upgrade kernel">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Centos system","level":"1.3.1","depth":2,"next":{"title":"Centos upgrade kernel","level":"1.3.2","depth":2,"path":"articles/Linux/centos-upgrade-kernel.md","ref":"articles/Linux/centos-upgrade-kernel.md","articles":[]},"previous":{"title":"About Linux","level":"1.3","depth":1,"ref":"","articles":[{"title":"Centos system","level":"1.3.1","depth":2,"path":"articles/Linux/centos-system.md","ref":"articles/Linux/centos-system.md","articles":[]},{"title":"Centos upgrade kernel","level":"1.3.2","depth":2,"path":"articles/Linux/centos-upgrade-kernel.md","ref":"articles/Linux/centos-upgrade-kernel.md","articles":[]},{"title":"Nginx","level":"1.3.3","depth":2,"path":"articles/Linux/nginx.md","ref":"articles/Linux/nginx.md","articles":[]},{"title":"Novnc","level":"1.3.4","depth":2,"path":"articles/Linux/novnc.md","ref":"articles/Linux/novnc.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","theme-comscore","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"copy-code-button":{},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/Git-Kyro/gitbook/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/Linux/centos-system.md","mtime":"2022-12-13T01:16:38.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-13T01:17:19.655Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
