@@ -1,0 +1,35 @@
+
+# 安装docker（Centos）
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# 启动docker
+systemctl start docker && systemctl enable docker && systemctl status docker
+
+# 安装 mysql 保留 VPN 数据
+yum install -y mariadb-server
+
+# 启动mysql
+systemctl start mariadb && systemctl enable mariadb && systemctl status mariadb
+
+#初始化mysql 得到用户和密码 root:P@ssw0rd
+
+# docker 拉取 VPN 镜像
+docker pull jrohy/trojan
+
+# 启动 VPN 镜像 8443 暴露 8443 作为客户端连接的 VPN 端口
+
+docker run -itdP -p 8443:443 --name trojan --restart=always --privileged jrohy/trojan init
+
+# 进入容器初始化 vpn 服务（准备一个域名 xxx.com）
+	docker exec -it trojan bash
+
+	容器内输入命令 trojan 初始化，根据提示输入下面信息
+
+	输入域名/域名对应IP/自动生成域名证书/密钥/数据库用户和密码(库会自动创建)
+
+	完成后查看trojan状态，直接输入命令 trojan
+
+# 客户端查看状态
+telnet xxx.com 8443
+
